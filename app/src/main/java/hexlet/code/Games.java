@@ -36,8 +36,9 @@ public class Games {
         Scanner info = new Scanner(System.in);
         var userName = Engine.userData();
         System.out.println("What is the result of the expression?");
+        int tryAmount = 3;
         int i = 0;
-        while (i < 3) {
+        while (i < tryAmount) {
             Random rand = new Random();
             int randInt1 = rand.nextInt(100);
             int randInt2 = rand.nextInt(100);
