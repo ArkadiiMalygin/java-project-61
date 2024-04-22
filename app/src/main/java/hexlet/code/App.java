@@ -25,19 +25,19 @@ public class App {
                 Cli.userData();
                 break;
             case 2:
-                Games.even();
+                Games.even(3, 100);
                 break;
             case 3:
-                Games.calc();
+                Games.calc(3, 100, 3);
                 break;
             case 4:
-                Games.gcd();
+                Games.gcd(3,100);
                 break;
             case 5:
-                Games.progression();
+                Games.progression(3, 10);
                 break;
             case 6:
-                Games.prime();
+                Games.prime(3, 100);
                 break;
             default:
                 System.out.println("Please learn to choose and come back when ever u rdy");
