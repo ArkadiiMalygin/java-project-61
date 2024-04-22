@@ -108,7 +108,7 @@ public class Games {
         int i = 0;
         while (i < 3) {
             Random rand = new Random();
-            System.out.println("Question: ");
+            System.out.print("Question: ");
             int randInt1 = rand.nextInt(10);
             int randInt2 = rand.nextInt(10);
             int k = 0;
