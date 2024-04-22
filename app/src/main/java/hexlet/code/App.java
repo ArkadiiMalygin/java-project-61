@@ -6,14 +6,15 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         Scanner info = new Scanner(System.in);
-        System.out.println("Please enter the game number and press Enter." +
-                "\n0 - exit" +
-                "\n1 - greet" +
-                "\n2 - even" +
-                "\n3 - calc" +
-                "\n4 - GCD" +
-                "\n5 - progression" +
-                "\n6 - prime");
+        System.out.println("""
+                Please enter the game number and press Enter.
+                0 - exit
+                1 - greet
+                2 - even
+                3 - calc
+                4 - GCD
+                5 - progression
+                6 - prime""");
         int gameOption = info.nextInt();
         System.out.println("Your choice:" + gameOption + "\n\n");
         switch(gameOption) {
