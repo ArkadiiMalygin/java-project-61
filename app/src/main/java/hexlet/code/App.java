@@ -16,7 +16,7 @@ public class App {
                 5 - progression
                 6 - prime""");
         int gameOption = info.nextInt();
-        System.out.println("Your choice: " + gameOption + "\n\n");
+        System.out.println("Your choice: " + gameOption + "\n");
         switch (gameOption) {
             case 0:
                 System.out.println("Have a nice day!");
