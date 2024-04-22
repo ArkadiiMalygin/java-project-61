@@ -17,7 +17,7 @@ public class App {
                 6 - prime""");
         int gameOption = info.nextInt();
         System.out.println("Your choice: " + gameOption + "\n\n");
-        switch(gameOption) {
+        switch (gameOption) {
             case 0:
                 System.out.println("Have a nice day!");
                 break;
@@ -31,7 +31,7 @@ public class App {
                 Games.calc();
                 break;
             case 4:
-                Games.GCD();
+                Games.gcd();
                 break;
             case 5:
                 Games.progression();

@@ -15,15 +15,15 @@ public class Games {
             String realAnswer;
             if (randInt % 2 == 0) {
                 realAnswer = "yes";
-            }
-            else {
+            } else {
                 realAnswer = "no";
             }
             System.out.println("Question: " + randInt);
             String userAnswer = info.nextLine();
             System.out.println("Your answer: " + userAnswer);
             if (!realAnswer.equals(userAnswer)) {
-                System.out.println("'"+ userAnswer + "' is wrong answer ;(. Correct answer was '" + realAnswer + "'.\n Let's try again, " + userName + "!");
+                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '"
+                        + realAnswer + "'.\n Let's try again, " + userName + "!");
                 return;
             }
             System.out.println("Correct!");
@@ -60,7 +60,8 @@ public class Games {
             int userAnswer = info.nextInt();
             System.out.println("Your answer: " + userAnswer);
             if (realAnswer != userAnswer) {
-                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + realAnswer + "'.\n Let's try again, " + userName + "!");
+                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + realAnswer
+                        + "'.\n Let's try again, " + userName + "!");
                 return;
             }
             System.out.println("Correct!");
@@ -69,7 +70,7 @@ public class Games {
         System.out.println("Congratulations, " + userName + "!");
     }
 
-    public static void GCD() {
+    public static void gcd() {
         Scanner info = new Scanner(System.in);
         var userName = Engine.userData();
         System.out.println("Find the greatest common divisor of given numbers.");
@@ -92,7 +93,8 @@ public class Games {
             int userAnswer = info.nextInt();
             System.out.println("Your answer: " + userAnswer);
             if (realAnswer != userAnswer) {
-                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + realAnswer + "'.\n Let's try again, " + userName + "!");
+                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + realAnswer
+                        + "'.\n Let's try again, " + userName + "!");
                 return;
             }
             System.out.println("Correct!");
@@ -114,9 +116,9 @@ public class Games {
             int k = 0;
             boolean f = false;
             int realAnswer = 0;
-            for (; k <= 10; k++){
+            for (; k <= 10; k++) {
                 var temp = randInt1 + randInt2 * k;
-                if (k == rand.nextInt(10) && !f){
+                if (k == rand.nextInt(10) && !f) {
                     realAnswer = temp;
                     System.out.print(".. ");
                     f = true;
@@ -131,7 +133,8 @@ public class Games {
             int userAnswer = info.nextInt();
             System.out.println("Your answer: " + userAnswer);
             if (realAnswer != userAnswer) {
-                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + realAnswer + "'.\n Let's try again, " + userName + "!");
+                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + realAnswer
+                        + "'.\n Let's try again, " + userName + "!");
                 return;
             }
             System.out.println("Correct!");
@@ -144,7 +147,8 @@ public class Games {
         Scanner info = new Scanner(System.in);
         var userName = Engine.userData();
         System.out.println("Answer 'yes' if the number is prime, otherwise answer 'no'.");
-        int[] primes = new int[] {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97};
+        int[] primes = new int[] {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31,
+            37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97};
         int i = 0;
         while (i < 3) {
             Random rand = new Random();
@@ -159,15 +163,15 @@ public class Games {
             }
             if (isPresent) {
                 realAnswer = "yes";
-            }
-            else {
+            } else {
                 realAnswer = "no";
             }
             System.out.println("Question: " + randInt);
             String userAnswer = info.nextLine();
             System.out.println("Your answer: " + userAnswer);
             if (!realAnswer.equals(userAnswer)) {
-                System.out.println("'"+ userAnswer + "' is wrong answer ;(. Correct answer was '" + realAnswer + "'.\n Let's try again, " + userName + "!");
+                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + realAnswer
+                        + "'.\n Let's try again, " + userName + "!");
                 return;
             }
             System.out.println("Correct!");
