@@ -9,7 +9,7 @@ public class Engine {
         System.out.println("May I have your name?");
 
         String userName = info.nextLine();
-        System.out.println("Hello, " + userName);
+        System.out.println("Hello, " + userName + "!");
         return userName;
     }
 }
