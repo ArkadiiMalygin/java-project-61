@@ -146,7 +146,7 @@ public class Games {
     public static void prime() {
         Scanner info = new Scanner(System.in);
         var userName = Engine.userData();
-        System.out.println("Answer 'yes' if the number is prime. Otherwise answer 'no'.");
+        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         int[] primes = new int[] {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31,
             37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97};
         int i = 0;
