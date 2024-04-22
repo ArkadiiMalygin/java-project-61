@@ -4,14 +4,14 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Games {
-    public static void even(int count, int bound) {
+    public static void even() {
         Scanner info = new Scanner(System.in);
         var userName = Engine.userData();
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         int i = 0;
-        while (i < count) {
+        while (i < 3) {
             Random rand = new Random();
-            int randInt = rand.nextInt(bound);
+            int randInt = rand.nextInt(100);
             String realAnswer;
             if (randInt % 2 == 0) {
                 realAnswer = "yes";
@@ -32,16 +32,16 @@ public class Games {
         System.out.println("Congratulations, " + userName + "!");
     }
 
-    public static void calc(int count, int bound, int dec) {
+    public static void calc() {
         Scanner info = new Scanner(System.in);
         var userName = Engine.userData();
         System.out.println("What is the result of the expression?");
         int i = 0;
-        while (i < count) {
+        while (i < 3) {
             Random rand = new Random();
-            int randInt1 = rand.nextInt(bound);
-            int randInt2 = rand.nextInt(bound);
-            int randIntM = rand.nextInt(dec);
+            int randInt1 = rand.nextInt(100);
+            int randInt2 = rand.nextInt(100);
+            int randIntM = rand.nextInt(3);
             int realAnswer;
             switch (randIntM) {
                 case 0:
@@ -70,15 +70,15 @@ public class Games {
         System.out.println("Congratulations, " + userName + "!");
     }
 
-    public static void gcd(int count, int bound) {
+    public static void gcd() {
         Scanner info = new Scanner(System.in);
         var userName = Engine.userData();
         System.out.println("Find the greatest common divisor of given numbers.");
         int i = 0;
-        while (i < count) {
+        while (i < 3) {
             Random rand = new Random();
-            int randInt1 = rand.nextInt(bound);
-            int randInt2 = rand.nextInt(bound);
+            int randInt1 = rand.nextInt(100);
+            int randInt2 = rand.nextInt(100);
             int a = randInt1;
             int b = randInt2;
             while (a != b) {
@@ -103,16 +103,16 @@ public class Games {
         System.out.println("Congratulations, " + userName + "!");
     }
 
-    public static void progression(int count, int bound) {
+    public static void progression() {
         Scanner info = new Scanner(System.in);
         var userName = Engine.userData();
         System.out.println("What number is missing in the progression?");
         int i = 0;
-        while (i < count) {
+        while (i < 3) {
             Random rand = new Random();
             System.out.print("Question: ");
-            int randInt1 = rand.nextInt(bound);
-            int randInt2 = rand.nextInt(bound);
+            int randInt1 = rand.nextInt(10);
+            int randInt2 = rand.nextInt(10);
             int k = 0;
             boolean f = false;
             int realAnswer = 0;
@@ -143,16 +143,16 @@ public class Games {
         System.out.println("Congratulations, " + userName + "!");
     }
 
-    public static void prime(int count, int bound) {
+    public static void prime() {
         Scanner info = new Scanner(System.in);
         var userName = Engine.userData();
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         int[] primes = new int[] {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31,
             37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97};
         int i = 0;
-        while (i < count) {
+        while (i < 3) {
             Random rand = new Random();
-            int randInt = rand.nextInt(bound);
+            int randInt = rand.nextInt(100);
             String realAnswer;
             boolean isPresent = false;
             for (int prime : primes) {
