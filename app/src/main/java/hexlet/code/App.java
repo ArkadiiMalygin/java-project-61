@@ -1,9 +1,19 @@
 package hexlet.code;
 
 
+import hexlet.code.games.Calc;
+import hexlet.code.games.Even;
+import hexlet.code.games.GCD;
+import hexlet.code.games.Prime;
+import hexlet.code.games.Progression;
+
 import java.util.Scanner;
 
 public class App {
+
+    public static final int ATTEMPTS = 3;
+    public static final int BOUND = 100;
+    public static final int BOUND_SMALL = 100;
     public static void main(String[] args) {
         Scanner info = new Scanner(System.in);
         System.out.println("""
@@ -25,19 +35,19 @@ public class App {
                 Cli.userData();
                 break;
             case 2:
-                Games.even();
+                Even.game();
                 break;
             case 3:
-                Games.calc();
+                Calc.game();
                 break;
             case 4:
-                Games.gcd();
+                GCD.game();
                 break;
             case 5:
-                Games.progression();
+                Progression.game();
                 break;
             case 6:
-                Games.prime();
+                Prime.game();
                 break;
             default:
                 System.out.println("Please learn to choose and come back when ever u rdy");
