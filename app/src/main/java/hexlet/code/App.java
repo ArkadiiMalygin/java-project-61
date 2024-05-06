@@ -13,7 +13,7 @@ public class App {
 
     public static final int ATTEMPTS = 3;
     public static final int BOUND = 100;
-    public static final int BOUND_SMALL = 100;
+    public static final int BOUND_SMALL = 10;
     public static void main(String[] args) {
         Scanner info = new Scanner(System.in);
         System.out.println("""
