@@ -8,10 +8,6 @@ import static hexlet.code.App.ATTEMPTS;
 import static hexlet.code.App.BOUND;
 
 public class GCD {
-    public static String[] questions;
-    public static String[] answers;
-    public static String task;
-
 
 
     public static void game() {
@@ -38,10 +34,8 @@ public class GCD {
 
             i++;
         }
-        questions = arrQuestions;
-        answers = arrAnswers;
-        task = "Find the greatest common divisor of given numbers.";
-        Engine.game(answers, questions, task);
+        String task = "Find the greatest common divisor of given numbers.";
+        Engine.game(arrAnswers, arrQuestions, task);
     }
 }
 

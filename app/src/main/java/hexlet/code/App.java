@@ -3,7 +3,6 @@ package hexlet.code;
 
 import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
-import hexlet.code.games.GCD;
 import hexlet.code.games.Prime;
 import hexlet.code.games.Progression;
 
@@ -14,6 +13,12 @@ public class App {
     public static final int ATTEMPTS = 3;
     public static final int BOUND = 100;
     public static final int BOUND_SMALL = 10;
+    public static final int PRIME = 6;
+    public static final int PROGRESSION = 5;
+    public static final int GCD = 4;
+    public static final int CALCULATION = 3;
+    public static final int EVEN = 2;
+
     public static void main(String[] args) {
         Scanner info = new Scanner(System.in);
         System.out.println("""
@@ -34,19 +39,19 @@ public class App {
             case 1:
                 Cli.userData();
                 break;
-            case 2:
+            case EVEN:
                 Even.game();
                 break;
-            case 3:
+            case CALCULATION:
                 Calc.game();
                 break;
-            case 4:
-                GCD.game();
+            case GCD:
+                hexlet.code.games.GCD.game();
                 break;
-            case 5:
+            case PROGRESSION:
                 Progression.game();
                 break;
-            case 6:
+            case PRIME:
                 Prime.game();
                 break;
             default:

@@ -10,11 +10,6 @@ import static hexlet.code.App.BOUND;
 public class Prime {
 
 
-    public static String[] questions;
-    public static String[] answers;
-    public static String task;
-
-
 
     public static void game() {
         String[] arrAnswers = new String[ATTEMPTS];
@@ -41,9 +36,7 @@ public class Prime {
 
             i++;
         }
-        questions = arrQuestions;
-        answers = arrAnswers;
-        task = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-        Engine.game(answers, questions, task);
+        String task = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+        Engine.game(arrAnswers, arrQuestions, task);
     }
 }

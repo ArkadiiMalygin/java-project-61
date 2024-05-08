@@ -9,11 +9,6 @@ import static hexlet.code.App.BOUND;
 
 public class Calc {
 
-    public static String[] questions;
-    public static String[] answers;
-    public static String task;
-
-
 
     public static void game() {
         String[] arrAnswers = new String[ATTEMPTS];
@@ -38,17 +33,19 @@ public class Calc {
                     arrAnswers[i] = Integer.toString(realAnswer);
                     arrQuestions[i] = "Question: " + randInt1 + " - " + randInt2;
                     break;
-                default:
+                case 2:
                     realAnswer = randInt1 * randInt2;
                     arrAnswers[i] = Integer.toString(realAnswer);
                     arrQuestions[i] = "Question: " + randInt1 + " * " + randInt2;
                     break;
+                default:
+                    arrAnswers[i] = null;
+                    arrQuestions[i] = "Smth went wrong!";
+                    break;
             }
             i++;
         }
-        questions = arrQuestions;
-        answers = arrAnswers;
-        task = "What is the result of the expression?";
-        Engine.game(answers, questions, task);
+        String task = "What is the result of the expression?";
+        Engine.game(arrAnswers, arrQuestions, task);
     }
 }

@@ -9,11 +9,6 @@ import static hexlet.code.App.BOUND_SMALL;
 
 public class Progression {
 
-    public static String[] questions;
-    public static String[] answers;
-    public static String task;
-
-
 
     public static void game() {
         String[] arrAnswers = new String[ATTEMPTS];
@@ -47,10 +42,8 @@ public class Progression {
 
             i++;
         }
-        questions = arrQuestions;
-        answers = arrAnswers;
-        task = "What number is missing in the progression?";
-        Engine.game(answers, questions, task);
+        String task = "What number is missing in the progression?";
+        Engine.game(arrAnswers, arrQuestions, task);
     }
 }
 

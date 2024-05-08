@@ -9,10 +9,6 @@ import static hexlet.code.App.BOUND;
 
 public class Even {
 
-    public static String[] questions;
-    public static String[] answers;
-    public static String task;
-
 
 
     public static void game() {
@@ -30,9 +26,7 @@ public class Even {
             }
             i++;
         }
-        questions = arrQuestions;
-        answers = arrAnswers;
-        task = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-        Engine.game(answers, questions, task);
+        String task = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+        Engine.game(arrAnswers, arrQuestions, task);
     }
 }
