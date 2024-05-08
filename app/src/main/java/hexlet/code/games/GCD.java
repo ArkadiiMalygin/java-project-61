@@ -8,8 +8,6 @@ import static hexlet.code.App.ATTEMPTS;
 import static hexlet.code.App.BOUND;
 
 public class GCD {
-
-
     public static void game() {
         String[] arrAnswers = new String[ATTEMPTS];
         String[] arrQuestions = new String[ATTEMPTS];

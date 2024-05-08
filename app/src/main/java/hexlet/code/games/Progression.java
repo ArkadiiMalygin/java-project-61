@@ -10,6 +10,8 @@ import static hexlet.code.App.BOUND_SMALL;
 public class Progression {
 
 
+    public static final int MINLENGTHOFPROGRESSION = 10;
+
     public static void game() {
         String[] arrAnswers = new String[ATTEMPTS];
         String[] arrQuestions = new String[ATTEMPTS];
@@ -22,7 +24,7 @@ public class Progression {
             int k = 0;
             boolean f = false;
             int realAnswer = 0;
-            for (; k <= 10; k++) {
+            for (; k <= MINLENGTHOFPROGRESSION; k++) {
                 var temp = randInt1 + randInt2 * k;
                 if (k == rand.nextInt(BOUND_SMALL) && !f) {
                     realAnswer = temp;
