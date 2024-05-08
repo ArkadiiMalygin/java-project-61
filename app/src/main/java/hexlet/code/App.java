@@ -14,11 +14,11 @@ public class App {
     public static final int ATTEMPTS = 3;
     public static final int BOUND = 100;
     public static final int BOUND_SMALL = 10;
-    public static final int choosePRIME = 6;
-    public static final int choosePROGRESSION = 5;
-    public static final int chooseGCD = 4;
-    public static final int chooseCALCULATION = 3;
-    public static final int chooseEVEN = 2;
+    public static final int CHOOSEPRIME = 6;
+    public static final int CHOOSEPROGRESSION = 5;
+    public static final int CHOOSEGCD = 4;
+    public static final int CHOOSECALCULATION = 3;
+    public static final int CHOOSEEVEN = 2;
 
     public static void main(String[] args) {
         Scanner info = new Scanner(System.in);
@@ -40,19 +40,19 @@ public class App {
             case 1:
                 Cli.userData();
                 break;
-            case chooseEVEN:
+            case CHOOSEEVEN:
                 Even.game();
                 break;
-            case chooseCALCULATION:
+            case CHOOSECALCULATION:
                 Calc.game();
                 break;
-            case chooseGCD:
+            case CHOOSEGCD:
                 GCD.game();
                 break;
-            case choosePROGRESSION:
+            case CHOOSEPROGRESSION:
                 Progression.game();
                 break;
-            case choosePRIME:
+            case CHOOSEPRIME:
                 Prime.game();
                 break;
             default:
