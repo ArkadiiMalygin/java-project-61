@@ -31,6 +31,9 @@ public class Prime {
     }
 
     public static Boolean isPrime (int randInt1) {
+        if (randInt1 < 2){
+            return false;
+        }
         int divider = 2;
 
         while (randInt1 > divider) {
