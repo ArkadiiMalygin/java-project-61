@@ -4,17 +4,16 @@ import hexlet.code.Engine;
 
 import java.util.Random;
 
-import static hexlet.code.App.ATTEMPTS;
-import static hexlet.code.App.BOUND_SMALL;
+import static hexlet.code.App.*;
 
 public class Progression {
 
 
     public static final int MINLENGTHOFPROGRESSION = 10;
+    public static final String PROGRESSION_TASK = "What number is missing in the progression?";
 
     public static void game() {
-        String[] arrAnswers = new String[ATTEMPTS];
-        String[] arrQuestions = new String[ATTEMPTS];
+        String[][] arrAnswerQuestions = new String[ATTEMPTS][2];
         int i = 0;
         while (i < ATTEMPTS) {
             Random rand = new Random();
@@ -23,11 +22,10 @@ public class Progression {
             int randInt2 = rand.nextInt(BOUND_SMALL);
             int k = 0;
             boolean f = false;
-            int realAnswer = 0;
             for (; k <= MINLENGTHOFPROGRESSION; k++) {
                 var temp = randInt1 + randInt2 * k;
                 if (k == rand.nextInt(BOUND_SMALL) && !f) {
-                    realAnswer = temp;
+                    arrAnswerQuestions[i][ANSWER] = Integer.toString(isMissing(randInt1, randInt2, k));
                     question.append(".. ");
                     f = true;
                 } else {
@@ -35,17 +33,19 @@ public class Progression {
                 }
             }
             if (!f) {
-                realAnswer = randInt1 + randInt2 * (BOUND_SMALL + 1);
+                arrAnswerQuestions[i][ANSWER] = Integer.toString(isMissing(randInt1, randInt2, BOUND_SMALL + 1));
                 question.append(".. ");
             }
-            arrAnswers[i] = Integer.toString(realAnswer);
 
-            arrQuestions[i] = question.toString();
+            arrAnswerQuestions[i][QUESTION] = question.toString();
 
             i++;
         }
-        String task = "What number is missing in the progression?";
-        Engine.game(arrAnswers, arrQuestions, task);
+        Engine.game(arrAnswerQuestions, PROGRESSION_TASK);
+    }
+
+    public static int isMissing(int randInt1, int randInt2, int step){
+        return randInt1 + randInt2 * step;
     }
 }
 

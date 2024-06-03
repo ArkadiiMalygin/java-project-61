@@ -19,6 +19,8 @@ public class App {
     public static final int CHOOSEGCD = 4;
     public static final int CHOOSECALCULATION = 3;
     public static final int CHOOSEEVEN = 2;
+    public static final int ANSWER = 0;
+    public static final int QUESTION = 1;
 
     public static void main(String[] args) {
         Scanner info = new Scanner(System.in);

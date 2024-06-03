@@ -4,29 +4,31 @@ import hexlet.code.Engine;
 
 import java.util.Random;
 
-import static hexlet.code.App.ATTEMPTS;
-import static hexlet.code.App.BOUND;
+import static hexlet.code.App.*;
 
 public class Even {
 
 
+    public static final String EVEN_TASK = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
     public static void game() {
-        String[] arrAnswers = new String[ATTEMPTS];
-        String[] arrQuestions = new String[ATTEMPTS];
+        String[][] arrAnswerQuestions = new String[ATTEMPTS][2];
         int i = 0;
         while (i < ATTEMPTS) {
             Random rand = new Random();
             int randInt = rand.nextInt(BOUND);
-            arrQuestions[i] = "Question: " + randInt;
-            if (randInt % 2 == 0) {
-                arrAnswers[i] = "yes";
+            arrAnswerQuestions[i][QUESTION] = "Question: " + randInt;
+            if (isEven(randInt)) {
+                arrAnswerQuestions[i][ANSWER] = "yes";
             } else {
-                arrAnswers[i] = "no";
+                arrAnswerQuestions[i][ANSWER] = "no";
             }
             i++;
         }
-        String task = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-        Engine.game(arrAnswers, arrQuestions, task);
+        Engine.game(arrAnswerQuestions, EVEN_TASK);
+    }
+
+    public static Boolean isEven(int randInt) {
+        return randInt % 2 == 0;
     }
 }

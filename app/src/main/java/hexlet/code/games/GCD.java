@@ -4,36 +4,38 @@ import hexlet.code.Engine;
 
 import java.util.Random;
 
-import static hexlet.code.App.ATTEMPTS;
-import static hexlet.code.App.BOUND;
+import static hexlet.code.App.*;
 
 public class GCD {
+
+    public static final String GCD_TASK = "Find the greatest common divisor of given numbers.";
+
     public static void game() {
-        String[] arrAnswers = new String[ATTEMPTS];
-        String[] arrQuestions = new String[ATTEMPTS];
+        String[][] arrAnswerQuestions = new String[ATTEMPTS][2];
         int i = 0;
         while (i < ATTEMPTS) {
             Random rand = new Random();
             int randInt1 = rand.nextInt(BOUND);
             int randInt2 = rand.nextInt(BOUND);
 
-            int a = randInt1;
-            int b = randInt2;
-            while (a != b) {
-                if (a > b) {
-                    a = a - b;
-                } else {
-                    b = b - a;
-                }
-            }
-            arrAnswers[i] = Integer.toString(a);
+            arrAnswerQuestions[i][ANSWER] = Integer.toString(realGDC(randInt1, randInt2));
 
-            arrQuestions[i] = "Question: " + randInt1 + " " + randInt2;
+            arrAnswerQuestions[i][QUESTION] = "Question: " + randInt1 + " " + randInt2;
 
             i++;
         }
-        String task = "Find the greatest common divisor of given numbers.";
-        Engine.game(arrAnswers, arrQuestions, task);
+        Engine.game(arrAnswerQuestions, GCD_TASK);
+    }
+
+    public static int realGDC(int a, int b) {
+        while (a != b) {
+            if (a > b) {
+                a = a - b;
+            } else {
+                b = b - a;
+            }
+        }
+        return a;
     }
 }
 
