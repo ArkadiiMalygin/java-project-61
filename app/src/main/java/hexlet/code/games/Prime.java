@@ -4,7 +4,10 @@ import hexlet.code.Engine;
 
 import java.util.Random;
 
-import static hexlet.code.App.*;
+import static hexlet.code.App.ATTEMPTS;
+import static hexlet.code.App.QUESTION;
+import static hexlet.code.App.ANSWER;
+import static hexlet.code.App.BOUND;
 
 public class Prime {
 
@@ -30,8 +33,8 @@ public class Prime {
         Engine.game(arrAnswerQuestions, PRIME_TASK);
     }
 
-    public static Boolean isPrime (int randInt1) {
-        if (randInt1 < 2){
+    public static Boolean isPrime(int randInt1) {
+        if (randInt1 < 2) {
             return false;
         }
         int divider = 2;

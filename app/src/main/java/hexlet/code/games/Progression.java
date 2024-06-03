@@ -4,7 +4,10 @@ import hexlet.code.Engine;
 
 import java.util.Random;
 
-import static hexlet.code.App.*;
+import static hexlet.code.App.ATTEMPTS;
+import static hexlet.code.App.QUESTION;
+import static hexlet.code.App.ANSWER;
+import static hexlet.code.App.BOUND_SMALL;
 
 public class Progression {
 
@@ -44,7 +47,7 @@ public class Progression {
         Engine.game(arrAnswerQuestions, PROGRESSION_TASK);
     }
 
-    public static int isMissing(int randInt1, int randInt2, int step){
+    public static int isMissing(int randInt1, int randInt2, int step) {
         return randInt1 + randInt2 * step;
     }
 }

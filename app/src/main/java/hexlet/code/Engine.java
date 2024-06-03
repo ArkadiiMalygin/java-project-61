@@ -2,7 +2,10 @@ package hexlet.code;
 
 import java.util.Scanner;
 
-import static hexlet.code.App.*;
+import static hexlet.code.App.ATTEMPTS;
+import static hexlet.code.App.QUESTION;
+import static hexlet.code.App.ANSWER;
+
 
 public class Engine {
 
@@ -20,7 +23,7 @@ public class Engine {
             System.out.println(arrAnswerQuestions[i][QUESTION]);
             String userAnswer = info.nextLine();
             System.out.println("Your answer: " + userAnswer);
-            if (!check(arrAnswerQuestions[i][ANSWER],userAnswer)) {
+            if (!check(arrAnswerQuestions[i][ANSWER], userAnswer)) {
                 System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '"
                         + arrAnswerQuestions[i][ANSWER] + "'.\n Let's try again, " + userName + "!");
                 return;
@@ -33,7 +36,7 @@ public class Engine {
 
     }
 
-    public static boolean check(String realAnswer,String userAnswer){
+    public static boolean check(String realAnswer, String userAnswer) {
         return realAnswer.equals(userAnswer);
     }
 }

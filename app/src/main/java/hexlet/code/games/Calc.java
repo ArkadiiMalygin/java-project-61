@@ -4,7 +4,10 @@ import hexlet.code.Engine;
 
 import java.util.Random;
 
-import static hexlet.code.App.*;
+import static hexlet.code.App.ATTEMPTS;
+import static hexlet.code.App.QUESTION;
+import static hexlet.code.App.ANSWER;
+import static hexlet.code.App.BOUND;
 
 public class Calc {
 
