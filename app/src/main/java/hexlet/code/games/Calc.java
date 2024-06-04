@@ -25,8 +25,8 @@ public class Calc {
             int randIntM = rand.nextInt(decimals.length);
 
             arrAnswerQuestions[i][ANSWER] = Integer.toString(calcRealAnswer(randInt1, randIntM, randInt2));
-            arrAnswerQuestions[i][QUESTION] = "Question: " + randInt1 + decimals[randIntM] + randInt2;
 
+            arrAnswerQuestions[i][QUESTION] = "Question: " + randInt1 + " " + decimals[randIntM] + " " + randInt2;
             i++;
         }
         Engine.game(arrAnswerQuestions, CALC_TASK);
