@@ -23,21 +23,16 @@ public class Progression {
             StringBuilder question = new StringBuilder("Question: ");
             int randInt1 = rand.nextInt(BOUND_SMALL);
             int randInt2 = rand.nextInt(BOUND_SMALL);
+            int[] progression = newProgression(randInt1, randInt2);
             int k = 0;
-            boolean f = false;
-            for (; k <= MINLENGTHOFPROGRESSION; k++) {
-                var temp = randInt1 + randInt2 * k;
-                if (k == rand.nextInt(BOUND_SMALL) && !f) {
-                    arrAnswerQuestions[i][ANSWER] = Integer.toString(isMissing(randInt1, randInt2, k));
+            int secretStep = rand.nextInt(MINLENGTHOFPROGRESSION);
+            for (; k < MINLENGTHOFPROGRESSION; k++) {
+                if (k == secretStep) {
+                    arrAnswerQuestions[i][ANSWER] = Integer.toString(isMissing(randInt1, randInt2, secretStep));
                     question.append(".. ");
-                    f = true;
                 } else {
-                    question.append(temp).append(" ");
+                    question.append(progression[k]).append(" ");
                 }
-            }
-            if (!f) {
-                arrAnswerQuestions[i][ANSWER] = Integer.toString(isMissing(randInt1, randInt2, BOUND_SMALL + 1));
-                question.append(".. ");
             }
 
             arrAnswerQuestions[i][QUESTION] = question.toString();
@@ -49,6 +44,15 @@ public class Progression {
 
     public static int isMissing(int randInt1, int randInt2, int step) {
         return randInt1 + randInt2 * step;
+    }
+
+    public static int[] newProgression(int randInt1, int randInt2) {
+        int[] progression = new int[MINLENGTHOFPROGRESSION];
+        int k = 0;
+        for (; k < MINLENGTHOFPROGRESSION; k++) {
+            progression[k] = randInt1 + randInt2 * k;
+        }
+        return progression;
     }
 }
 

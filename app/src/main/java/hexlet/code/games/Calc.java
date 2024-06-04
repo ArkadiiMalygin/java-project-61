@@ -23,21 +23,10 @@ public class Calc {
             int randInt1 = rand.nextInt(BOUND);
             int randInt2 = rand.nextInt(BOUND);
             int randIntM = rand.nextInt(decimals.length);
+
             arrAnswerQuestions[i][ANSWER] = Integer.toString(calcRealAnswer(randInt1, randIntM, randInt2));
-            switch (randIntM) {
-                case 0:
-                    arrAnswerQuestions[i][QUESTION] = "Question: " + randInt1 + " + " + randInt2;
-                    break;
-                case 1:
-                    arrAnswerQuestions[i][QUESTION]  = "Question: " + randInt1 + " - " + randInt2;
-                    break;
-                case 2:
-                    arrAnswerQuestions[i][QUESTION] = "Question: " + randInt1 + " * " + randInt2;
-                    break;
-                default:
-                    arrAnswerQuestions[i][QUESTION] = "Smth went wrong!";
-                    break;
-            }
+            arrAnswerQuestions[i][QUESTION] = "Question: " + randInt1 + decimals[randIntM] + randInt2;
+
             i++;
         }
         Engine.game(arrAnswerQuestions, CALC_TASK);
